@@ -1,3 +1,6 @@
+import css from "./FriendList.module.css";
+// import clsx from "clsx";
+
 const friends = [
   {
     avatar: "https://cdn-icons-png.flaticon.com/512/1998/1998592.png",
@@ -33,13 +36,13 @@ const friends = [
 
 const FriendListItem = ({ friends }) => {
   return (
-    <ul>
+    <ul className={css.friends}>
       {friends.map(({ avatar, name, isOnline, id }) => {
         return (
-          <li key={id}>
+          <li key={id} className={css.friend}>
             <img src={avatar} alt={name} width="48" />
             <p>{name}</p>
-            <p>{isOnline}</p>
+            <p>{isOnline ? "Online" : "Offline"}</p>
           </li>
         );
       })}
