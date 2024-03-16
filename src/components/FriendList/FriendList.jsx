@@ -41,7 +41,7 @@ const FriendListItem = ({ friends }) => {
         return (
           <li key={id} className={css.friend}>
             <img src={avatar} alt={name} width="48" />
-            <p>{name}</p>
+            <p className={css.name}>{name}</p>
             <p className={isOnline ? css.online : css.offline}>
               {isOnline ? "Online" : "Offline"}
             </p>
