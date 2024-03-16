@@ -1,10 +1,10 @@
-// import { useState } from "react";
-// import reactLogo from "./assets/react.svg";
-// import viteLogo from "/vite.svg";
 import "./App.css";
 import Profile from "../Profile/Profile";
 import FriendList from "../FriendList/FriendList";
 import userData from "../../data/userData.json";
+import friendsData from "../../data/friendsData.json";
+import transactions from "../../data/transactions.json";
+import TransactionHistory from "../TransactionHistory/TransactionHistory";
 
 const App = () => {
   return (
@@ -16,7 +16,8 @@ const App = () => {
         image={userData.avatar}
         stats={userData.stats}
       />
-      <FriendList />
+      <FriendList friends={friendsData} />
+      <TransactionHistory items={transactions} />
     </>
   );
 };

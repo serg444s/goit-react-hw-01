@@ -1,5 +1,3 @@
-// import clsx from "clsx";
-// import { HiUser } from "react-icons/hi";
 import css from "./Profile.module.css";
 
 const Profile = ({ image, name, tag, location, stats }) => {
